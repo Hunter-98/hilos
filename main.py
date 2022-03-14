@@ -113,35 +113,32 @@ def the_gui():
                                       args=(float(values['-SECONDS3-']),
                                             window), daemon=True)
                 thread3.start()#CAMBIO
-        if event =='-PROGRESS3-':#CAMBIO
-            window['-PROG3-'].update_bar(values[event], 100)       #CAMBIO
-        if event == '-THREAD3-':#CAMBIO
-            window['-PROG3-'].update_bar(0,0)#CAMBIO
-
-
+              
         if event == 'Boton4': #CAMBIO   
             if values['-SECONDS4-']!= '' and float(values['-SECONDS4-'])>=0: 
                 thread4 = threading.Thread(target=long_operation_thread4,
                                       args=(float(values['-SECONDS4-']),
                                             window), daemon=True)
                 thread4.start()#CAMBIO
-        if event =='-PROGRESS4-':#CAMBIO
-            window['-PROG4-'].update_bar(values[event], 100)       #CAMBIO
-        if event == '-THREAD4-':#CAMBIO
-            window['-PROG4-'].update_bar(0,0)#CAMBIO
-
-          
-        
+              
         if event == 'Boton5': #CAMBIO
             if values['-SECONDS5-']!= '' and float(values['-SECONDS5-'])>=0: 
                 thread5 = threading.Thread(target=long_operation_thread5,
                                       args=(float(values['-SECONDS5-']),
                                             window), daemon=True)
                 thread5.start()#CAMBIO
-        if event =='-PROGRESS5-':#CAMBIO
+        if event =='-PROGRESS3-':                                  #CAMBIO
+            window['-PROG3-'].update_bar(values[event], 100)       #CAMBIO
+        if event == '-THREAD3-':                                   #CAMBIO
+            window['-PROG3-'].update_bar(0,0)                      #CAMBIO      
+        if event =='-PROGRESS4-':                                  #CAMBIO
+            window['-PROG4-'].update_bar(values[event], 100)       #CAMBIO
+        if event == '-THREAD4-':                                   #CAMBIO
+            window['-PROG4-'].update_bar(0,0)                      #CAMBIO
+        if event =='-PROGRESS5-':                                  #CAMBIO
             window['-PROG5-'].update_bar(values[event], 100)       #CAMBIO
-        if event == '-THREAD5-':#CAMBIO
-            window['-PROG5-'].update_bar(0,0)#CAMBIO
+        if event == '-THREAD5-':                                   #CAMBIO
+            window['-PROG5-'].update_bar(0,0)                      #CAMBIO
 
                 
     window.close()
